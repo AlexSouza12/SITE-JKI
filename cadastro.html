@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="stylesheet" href="./css/styles.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+        <title>Cadastro</title>
+    <link rel="icon" type="image/png" href="img/Mão Branca com sombra.png"/>
+    <title>Site Jki Sucatas</title>
+
+    <style>
+
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{
+            background-color: black;
+        }
+
+        form{
+            background-color: white;
+            max-width: 500px;
+            width: 70%;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);  
+        }
+
+        form h3{
+            text-align: center;
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        
+        form input[type=text],
+        form input[type=password]{
+            width: 100%;
+            height: 45px;
+            border: 1px solid black;
+            padding-left: 10px;
+            margin: 10px 0;
+        }
+
+        form input[type=submit]{
+            width: 100%;
+            height: 40px;
+            cursor: pointer;
+            background:#229b58;
+            color: black;
+            border: 0;
+            border-radius: 20px;
+            transition: 1s;
+        }
+
+        form input[type=submit].hover{
+            background-color: #176C3D;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="menu">
+
+
+        <div class="cabeça">
+
+            <div class="logo-jki">
+                <a href="index.html"><img src="./IMG/Mão Branca com sombra.png" width="100px"></a>
+                <h1 class="nome-empresa"><em><a href="index.html" style="text-decoration: none; color: white;"> JKI SUCATAS</a></em></h1>
+                <div class="container-input">
+                    <input type="text" placeholder="Search" name="text" class="input">
+                    <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <button class="botao-login"><a href="cadastro.html" style="text-decoration: none; color: black;">
+                    cadastrar</a>
+                </button>
+            </div>
+
+
+        </div>
+
+
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="serviços.html" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="localização.html" class="nav-link">
+                        Localização</a>
+                </li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link"> Sobre</a>
+                </li>
+            </ul>
+        </div>
+        
+        <form>
+
+           <h3>Login</h3> 
+           <input type="text" id="email" placeholder="Seu e-mail..."/>
+           <input type="password" id="senha" placeholder="Sua senha"/>
+           <input type="submit" id="acao" value="Enviar" onclick="logar(); return false"/>
+        
+        </form>
+
+        <script>
+
+            function logar(){
+                var login = document.getElementById("email").value;
+                var senha = document.getElementById("senha").value;
+
+                if(login == "admin" && senha ==  "admin"){
+                    alert('sucesso');
+                    location.href="home.html";
+                }else{
+                    alert("Usuario ou senha incorretos");
+                }
+            }
+        
+        </script>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="rodapé">
+                <p class="nav-footer-secondaryinfo">CNPJ n.º 14.291.085/0001-19 / R. Salvador Gaeta, 462 - Vila Augusta,
+                    Guarulhos - SP, CEP 07023-010 - Empresa de Reciclagem.</p>
+                </div>
+        </div>
+        </div>
+    
+    
+    </body>
+    
+    <script src="./JS/comando.js"></script>
+    
+    </html>
