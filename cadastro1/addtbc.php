@@ -5,9 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cadastro de Cliente</title>
-	<div class="container-fluid">
-<a href="http://localhost/cadastro1/"><input type="button" name="Home" value="HOME"></a> <br>
-</div>
+	
 </head>
 <body>
 
@@ -15,7 +13,7 @@
 	<div class="container-fluid">
 
 <?php include_once"form_busca.php"; ?>
-<form method="post" name="cliente" action="ainstbc.php">
+<form method="post" name="cliente" action="index.html">
 
 <div class="form col-md-2">	
 	<label>Nome</label>	

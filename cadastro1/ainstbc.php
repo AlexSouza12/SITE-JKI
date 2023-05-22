@@ -21,7 +21,7 @@ $sql = "INSERT INTO tbclientes(nome,cnpj,inscestadual,responsavel,cpf,rg,enderec
 if (mysqli_query($conn, $sql)){
 	header("Location: addtbc.php");
 }else{
-	echo "Dados nao enviados" . $sql . "<br>" . mysql_error($conn);
+	echo "Dados nao enviados" . $sql . "<br>" . mysqli_error($conn);
 }
-mysql_close($conn);
+mysqli_close($conn);
 ?>

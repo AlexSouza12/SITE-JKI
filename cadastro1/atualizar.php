@@ -22,7 +22,7 @@ $sql = "UPDATE tbclientes SET nome ='$nome', cnpj='$cnpj', inscestadual='$insces
 if (mysqli_query($conn, $sql)){
 	echo "<script>alert('Cadastro salvo com sucesso!');window.location = 'addtbc.php?id=$id';</script>";
 }else{
-	echo "Dados nao enviados" . $sql . "<br>" . mysql_error($conn);
+	echo "Dados nao enviados" . $sql . "<br>" . mysqli_error($conn);
 }
-mysql_close($conn);
+mysqli_close($conn);
 ?>
